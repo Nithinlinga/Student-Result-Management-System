@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <h1>Admin Page</h1>
+    <nav>
+        <ul>
+            <li><a href="#upload">Upload Results</a></li>
+            <li><a href="Update_results.html">Update Results</a></li>
+            <li><a href="messages.php">Messages</a></li>
+        </ul>
+    </nav>
+    <section id="update">
+        <h2>Update Results</h2>
+        <form action="marksupdate.php" method="post">
+            <label for="Uid">Uid :</label>
+            <input type="text" id="Uid" name="Uid" required>
+            <label for="course">Course:</label>
+            <select name="course" id="course">
+                <option value="null">Select course</option>
+                <option value="JAVA">JAVA</option>
+                <option value="DBMS">DBMS</option>
+                <option value="PYTHON">PYTHON</option>
+                <option value="CPP">CPP</option>
+            </select>
+            <label for="exam_type">Exam type:</label>
+            <input type="text" id="exam_type" name="exam_type" required>
+            <label for="marks">Marks:</label>
+            <input type="text" id="marks" name="marks" required>
+            <button type="submit">Update</button>
+        </form>
+    </section>
+</body>
+</html>

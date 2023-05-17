@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4CAF50;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #e6e6e6;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #e6e6e6;
+            box-sizing: border-box;
+            
+        }
+        
+        select {
+            height: 46px;
+        }
+        
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .form-container{
+            align-items: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        #reason {
+            width: 395px;
+            height: 106px;
+     }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <form action="Rectification.php" method="post">
+        <label for="Uid">UID:</label>
+        <input type="text" id="Uid" name="Uid" placeholder="Enter your Uid">
+        <label for="course">COURSE:</label>
+        <select name="course" id="course">
+            <option value="null">Select course</option>
+            <option value="JAVA">JAVA</option>
+            <option value="DBMS">DBMS</option>
+            <option value="PYTHON">PYTHON</option>
+            <option value="CPP">CPP</option>
+        </select>
+        <label for="reason">REASON:</label>
+        <textarea id="reason" name="reason">Enter your query</textarea>
+        <button type="submit">Submit</button>
+</div>
+</form>
+</body>
+</html>

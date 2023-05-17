@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Result Management System Login Page</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="logo-container">
+        <img src="cuimsLogo.png" alt="University Logo">
+    </div>
+
+    <div class="login-container">
+
+        <div class="login-form student-login">
+            <img src="studenticon.png" alt="Student Logo">
+            <h2>Student Login</h2>
+            <form action="student-login.php" method="post">
+                <input type="email" id="S_email" placeholder="Enter email" name="S_email">
+                <input type="password" id= "password" placeholder="Enter Password" name="S_password">
+                <button type="submit"><a class="login-button">Login</a></button>
+            </form>
+            <a href="forgot-password.html">Forgot Password?</a>
+        </div>
+
+        <div class="login-form admin-login">
+            <img src="stafficon.png" alt="Staff Logo">
+            <h2>Admin Login</h2>
+            <form action="admin-login.php" method="post">
+                <input type="email" placeholder="Enter email" name="A_email">
+                <input type="password" placeholder="Enter Password" name="A_password">
+                <button type="submit"><a class="login-button">Login</a></button>
+            </form>
+            <a href="forgot-password.html">Forgot Password?</a>
+        </div>
+    </div>
+</body>
+</html>
