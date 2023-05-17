@@ -18,15 +18,16 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// Insert data into marks table
-$sql = "UPDATE student_marks SET Uid='$Uid',exam_type='$exam_type', marks='$marks'WHERE course='$course'";
-
+$sql = "UPDATE student_marks SET marks='$marks' WHERE Uid='$Uid' AND course='$course' AND exam_type='$exam_type'";
 if ($conn->query($sql) === TRUE) {
-  echo "Marks updated successfully!";
+  if ($conn->affected_rows > 0) {
+    echo "Marks updated successfully!";
+  } else {
+    echo "No matching record found for update.";
+  }
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 // Close MySQL connection
 $conn->close();
 ?>
